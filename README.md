@@ -1,1 +1,1 @@
-Academic Website
+Website
