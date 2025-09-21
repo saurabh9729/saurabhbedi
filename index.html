@@ -44,7 +44,6 @@
       width:100%; aspect-ratio: 4/5; object-fit:cover; border-radius:10px; background:#f4f4f7;
       display:block; border:1px solid var(--line);
     }
-    .name{font-size:20px; font-weight:700; margin:14px 0 2px}
     .role{color:var(--muted); margin:10px 0}
     .links{display:flex; flex-direction:column; gap:8px; margin-top:10px}
     .links a{
@@ -69,6 +68,9 @@
     /* Tag groups */
     .tag-group{margin-top:14px}
     .tag-title{font-size:12px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px}
+
+    /* Underline utility */
+    .u{ text-decoration: underline; text-underline-offset: 2px; }
   </style>
 </head>
 <body>
@@ -82,7 +84,6 @@
       <!-- LEFT: photo + quick links -->
       <aside class="sidebar">
         <img class="photo" src="imageSaurabh.jpg" alt="Portrait of Saurabh Bedi" />
-        <!-- Email only under image -->
         <p class="role"><a href="mailto:saurabh.bedi@econ.uzh.ch">saurabh.bedi@econ.uzh.ch</a></p>
 
         <div class="links">
@@ -91,9 +92,6 @@
           </a>
           <a href="https://scholar.google.com/citations?user=PZrYFUMAAAAJ&hl=en" target="_blank" rel="noopener">
             <span>Google Scholar</span> <span class="small">/ publications</span>
-          </a>
-          <a href="mailto:saurabh.bedi@econ.uzh.ch">
-            <span>Email</span> <span class="small">/ saurabh.bedi@econ.uzh.ch</span>
           </a>
         </div>
 
@@ -136,7 +134,7 @@
             Broadly, I work on: <em>perception in risky decision-making</em> and biases such as <em>probability distortions in description</em>; mechanisms behind the <em>description–experience gap</em>; <em>decision biases in multi-attribute choice</em>; and <em>higher-order cognition as modular, resource-rational sequential inference</em>.
           </p>
           <p>
-            See <a href="https://www.biorxiv.org/content/10.1101/2025.09.11.675565v1" target="_blank" rel="noopener">here</a> for a recent example of this approach.
+            See <a class="u" href="https://www.biorxiv.org/content/10.1101/2025.09.11.675565v1" target="_blank" rel="noopener">here</a> for a recent example of this approach.
           </p>
         </section>
 
@@ -176,7 +174,7 @@
         </section>
 
         <footer>
-          © <span id="y">2025</span> Saurabh Bedi · Zurich · <a href="mailto:saurabh.bedi@econ.uzh.ch">saurabh.bedi@econ.uzh.ch</a>
+          © <span id="y">2025</span> Saurabh Bedi · Zurich ·
         </footer>
       </main>
     </div>
