@@ -4,47 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Page title -->
+  <!-- Title & basic SEO -->
   <title>Saurabh Bedi Website</title>
-
-  <!-- Basic SEO -->
-  <meta name="description" content="Saurabh Bedi — PhD student in Neuroeconomics at the University of Zurich. Noisy inference, efficient coding, Bayesian decoding, and decision biases." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://saurabh9729.github.io/saurabhbedi/" />
-
-  <!-- Open Graph (for link previews) -->
-  <meta property="og:title" content="Saurabh Bedi — Website" />
-  <meta property="og:description" content="PhD student in Neuroeconomics at UZH. Noisy inference, efficient coding, Bayesian decoding, decision biases." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://saurabh9729.github.io/saurabhbedi/" />
-  <meta property="og:image" content="https://saurabh9729.github.io/saurabhbedi/imageSaurabh.jpg" />
-
-  <!-- Twitter card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Saurabh Bedi — Website" />
-  <meta name="twitter:description" content="PhD student in Neuroeconomics at UZH. Noisy inference, efficient coding, Bayesian decoding, decision biases." />
-  <meta name="twitter:image" content="https://saurabh9729.github.io/saurabhbedi/imageSaurabh.jpg" />
-
-  <!-- Structured data: Person -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Saurabh Bedi",
-    "jobTitle": "PhD student in Neuroeconomics",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "University of Zurich"
-    },
-    "email": "mailto:saurabh.bedi@econ.uzh.ch",
-    "url": "https://saurabh9729.github.io/saurabhbedi/",
-    "image": "https://saurabh9729.github.io/saurabhbedi/imageSaurabh.jpg",
-    "sameAs": [
-      "https://bsky.app/profile/saurabhbedi.bsky.social",
-      "https://scholar.google.com/citations?user=PZrYFUMAAAAJ&hl=en"
-    ]
-  }
-  </script>
+  <meta name="description" content="Personal website of Saurabh Bedi — PhD student in Neuroeconomics at the University of Zurich. Noisy inference, efficient coding, Bayesian decoding, and decision biases." />
 
   <style>
     :root{
@@ -70,15 +32,12 @@
       grid-template-columns: 320px 1fr;
       gap:28px;
     }
-    @media (max-width: 860px){
-      .grid{grid-template-columns: 1fr}
-      .sidebar{position:static}
-    }
 
     /* Sidebar */
     .sidebar{
       position:sticky; top:24px; align-self:start;
       border:1px solid var(--line); border-radius:14px; padding:18px;
+      background:#fff;
     }
     .photo{
       width:100%; aspect-ratio: 4/5; object-fit:cover; border-radius:10px; background:#f4f4f7;
@@ -89,6 +48,7 @@
     .links a{
       display:flex; align-items:center; gap:10px;
       padding:10px 12px; border:1px solid var(--line); border-radius:10px;
+      text-decoration:none;
     }
     .links a span{font-weight:600}
     .pill{display:inline-block; padding:3px 8px; border:1px solid var(--line); border-radius:999px; font-size:12px; color:var(--muted); margin-right:6px; margin-bottom:6px}
@@ -109,8 +69,33 @@
     .tag-group{margin-top:14px}
     .tag-title{font-size:12px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px}
 
-    /* Underline utility */
+    /* Underline utility (for the “here” link) */
     .u{ text-decoration: underline; text-underline-offset: 2px; }
+
+    /* --- Mobile fixes --- */
+    /* Prevent accidental horizontal scroll & wrap long items nicely */
+    html, body { overflow-x: hidden; }
+    .wrap, header, .links a, .pill { overflow-wrap: anywhere; word-break: break-word; }
+
+    /* Images scale within their containers */
+    img { max-width: 100%; height: auto; }
+
+    /* Allow link rows to wrap (no forced one-line overflow) */
+    .links a { white-space: normal; }
+
+    /* Responsive layout adjustments */
+    @media (max-width: 860px){
+      .grid{ grid-template-columns: 1fr; }
+      .sidebar{ position: static; padding: 14px; }
+      .wrap{ padding: 24px 16px; }
+      header{ padding-bottom: 14px; margin-bottom: 22px; }
+      h2{ font-size: 18px; }
+      .pill{ font-size: 12px; padding: 3px 8px; }
+      .links a{ padding: 10px; }
+    }
+
+    /* iOS Safari text zoom quirk */
+    html { -webkit-text-size-adjust: 100%; }
   </style>
 </head>
 <body>
