@@ -73,17 +73,10 @@
     .u{ text-decoration: underline; text-underline-offset: 2px; }
 
     /* --- Mobile fixes --- */
-    /* Prevent accidental horizontal scroll & wrap long items nicely */
     html, body { overflow-x: hidden; }
     .wrap, header, .links a, .pill { overflow-wrap: anywhere; word-break: break-word; }
-
-    /* Images scale within their containers */
     img { max-width: 100%; height: auto; }
-
-    /* Allow link rows to wrap (no forced one-line overflow) */
     .links a { white-space: normal; }
-
-    /* Responsive layout adjustments */
     @media (max-width: 860px){
       .grid{ grid-template-columns: 1fr; }
       .sidebar{ position: static; padding: 14px; }
@@ -93,8 +86,6 @@
       .pill{ font-size: 12px; padding: 3px 8px; }
       .links a{ padding: 10px; }
     }
-
-    /* iOS Safari text zoom quirk */
     html { -webkit-text-size-adjust: 100%; }
   </style>
 </head>
@@ -150,16 +141,13 @@
         <section id="about">
           <h2>About</h2>
           <p>
-            I study how the <strong>resource-limited brain</strong> exploits structure in the environment to compute efficiently, which gives rise to systematic <strong>biases</strong> and <strong>variability</strong> in behavior.
+            I am a PhD student in neuroeconomics in <strong>Christian Ruff’s</strong> group at the <strong>University of Zurich</strong>. My broad interests are <em>resource-rational cognition</em>, <em>noisy inference</em>, <em>efficient coding</em>, and <em>Bayesian decoding</em>—how a constrained brain exploits environmental structure to compute efficiently, yielding systematic biases and variability in behavior.
           </p>
           <p>
-            So far, my work has focused on <strong>single-trial decisions</strong> (risk, learning, multi-attribute valuation) through the lens of <em>noisy/resource-rational inference</em>.
+            Much of my work uses this perspective to explain well-known biases in economic decision making. For example, I study how noisy and efficient computations can produce <em>probability distortions</em> in described risk—see a recent preprint <a class="u" href="https://www.biorxiv.org/content/10.1101/2025.09.11.675565v1" target="_blank" rel="noopener">here</a>. Related projects extend this view to the <em>description–experience gap</em> in decisions under risk, and to how <em>task goals</em> modulate computations in <em>multi-attribute choice</em>. Ongoing work examines <em>valuation</em> as a modular, sequential, resource-rational noisy inference process.
           </p>
           <p>
-            Broadly, I work on: <em>perception in risky decision-making</em> and biases such as <em>probability distortions in description</em>; mechanisms behind the <em>description–experience gap</em>; <em>decision biases in multi-attribute choice</em>; and <em>higher-order cognition as modular, resource-rational sequential inference</em>.
-          </p>
-          <p>
-            See <a class="u" href="https://www.biorxiv.org/content/10.1101/2025.09.11.675565v1" target="_blank" rel="noopener">here</a> for a recent example of this approach.
+            To date, my focus has been on <strong>single-trial decisions</strong>. I am now extending the same framework to <strong>sequential decision-making</strong>, where the temporal structure of trials and task goals shape planning and learning in more complex settings. Happy to chat.
           </p>
         </section>
 
