@@ -1,100 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saurabh Bedi | Academic Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #222;
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-            font-size: 1.5em;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 15px;
-            background: #444;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            padding: 10px 15px;
-        }
-        section {
-            max-width: 900px;
-            margin: 30px auto;
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #222;
-            color: white;
-            margin-top: 20px;
-        }
-        h2 {
-            color: #222;
-            border-bottom: 2px solid #444;
-            padding-bottom: 5px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saurabh Bedi | Neuroeconomics</title>
+  <meta name="description" content="Saurabh Bedi — PhD in Neuroeconomics. Resource-rational inference, efficient coding, Bayesian computation in perception and decision making." />
+
+  <style>
+    :root{
+      --accent: rgb(0,0,120);
+      --text: #0f172a;          /* slate-900 */
+      --muted: #475569;         /* slate-600 */
+      --line: #e5e7eb;          /* gray-200 */
+      --bg: #ffffff;
+      --maxw: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:32px 20px}
+    header{margin-bottom:28px;border-bottom:1px solid var(--line);padding-bottom:18px}
+    header h1{margin:0 0 6px 0;font-size:clamp(28px,4vw,40px);letter-spacing:0.2px}
+    header p{margin:0;color:var(--muted)}
+
+    /* Layout */
+    .grid{
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:28px;
+    }
+    @media (max-width: 860px){
+      .grid{grid-template-columns: 1fr}
+      .sidebar{position:static}
+    }
+
+    /* Sidebar */
+    .sidebar{
+      position:sticky; top:24px; align-self:start;
+      border:1px solid var(--line); border-radius:14px; padding:18px;
+    }
+    .photo{
+      width:100%; aspect-ratio: 4/5; object-fit:cover; border-radius:10px; background:#f4f4f7;
+      display:block; border:1px solid var(--line);
+    }
+    .name{font-size:20px; font-weight:700; margin:14px 0 2px}
+    .role{color:var(--muted); margin:0 0 10px}
+    .links{display:flex; flex-direction:column; gap:8px; margin-top:10px}
+    .links a{
+      display:flex; align-items:center; gap:10px;
+      padding:10px 12px; border:1px solid var(--line); border-radius:10px;
+    }
+    .links a span{font-weight:600}
+    .pill{display:inline-block; padding:3px 8px; border:1px solid var(--line); border-radius:999px; font-size:12px; color:var(--muted); margin-right:6px}
+
+    /* Main content */
+    section{margin-bottom:28px; padding-bottom:8px; border-bottom:1px dashed var(--line)}
+    h2{margin:0 0 10px; font-size:20px; color:var(--accent)}
+    p{line-height:1.6; margin:10px 0}
+    ul{margin:10px 0 6px 18px}
+    li{margin:6px 0}
+    .callout{
+      background:#f8fafc; border:1px solid var(--line); border-radius:12px; padding:12px 14px; margin-top:10px
+    }
+    .small{font-size:14px;color:var(--muted)}
+    .edu-item{margin:10px 0}
+    .edu-head{display:flex; justify-content:space-between; gap:12px; font-weight:700}
+    .edu-inst{color:var(--muted); font-weight:500}
+    .edu-foot{font-style:italic; color:var(--muted)}
+    footer{margin-top:16px; color:var(--muted); font-size:14px}
+  </style>
 </head>
 <body>
+  <div class="wrap">
     <header>
-        <h1>Saurabh Bedi</h1>
-        <p>Cognitive Science & Computational Neuroscience</p>
+      <h1>Saurabh Bedi</h1>
+      <p>PhD candidate in Neuroeconomics, University of Zurich</p>
     </header>
-    
-    <nav>
-        <a href="#about">About</a>
-        <a href="#research">Research Projects</a>
-        <a href="#publications">Publications</a>
-    </nav>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi! Welcome to my website :). I am Saurabh Bedi, a PhD student in Neuroeconomics at the Marlene Porsche Graduate School of Neuroeconomics.</p>
-        <p>My research interests broadly revolve around how we can understand the biases and variability in basic learning and decision making from the perspective of a noisy brain carrying out its computations under limited resource constraints.</p>
-    </section
-    
-    <section id="research">
-        <h2>Research Projects</h2>
-        <p>Below:</p>
-        <ul>
-            <li><strong>Project 1:</strong> [Brief description of the project]</li>
-            <li><strong>Project 2:</strong> [Brief description of the project]</li>
-            <li><strong>Project 3:</strong> [Brief description of the project]</li>
-        </ul>
-    </section>
-    
-    <section id="publications">
-        <h2>Publications</h2>
-        <p>Here are some of my key publications:</p>
-        <ul>
-            <li><strong>Paper 1:</strong> [Title], [Journal/Conference], [Year]. [<a href="#">Link</a>]</li>
-            <li><strong>Paper 2:</strong> [Title], [Journal/Conference], [Year]. [<a href="#">Link</a>]</li>
-            <li><strong>Paper 3:</strong> [Title], [Journal/Conference], [Year]. [<a href="#">Link</a>]</li>
-        </ul>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Saurabh Bedi | Contact: your.email@domain.com</p>
-    </footer>
+
+    <div class="grid">
+      <!-- LEFT: photo + quick links -->
+      <aside class="sidebar">
+        <img class="photo" src="headshot.jpg" alt="Portrait of Saurabh Bedi" />
+        <div class="name">Saurabh Bedi</div>
+        <p class="role">Neuroeconomics · Computational Cognitive Science</p>
+
+        <div class="links">
+          <!-- TODO: replace # with your Bluesky URL if you have one -->
+          <a href="#" target="_blank" rel="noopener">
+            <span>Bluesky</span> <span class="small">/ social</span>
+          </a>
+          <a href="https://scholar.google.com/citations?user=PZrYFUMAAAAJ&hl=en" target="_blank" rel="noopener">
+            <span>Google Scholar</span> <span class="small">/ publications</span>
+          </a>
+          <a href="cv/Saurabh_Bedi_CV.pdf" target="_blank" rel="noopener">
+            <span>CV</span> <span class="small">/ PDF</span>
+          </a>
+          <a href="mailto:saurabh.bedi@econ.uzh.ch">
+            <span>Email</span> <span class="small">/ saurabh.bedi@econ.uzh.ch</span>
+          </a>
+        </div>
+
+        <div style="margin-top:14px">
+          <span class="pill">resource-rationality</span>
+          <span class="pill">noisy inference</span>
+          <span class="pill">efficient coding</span>
+          <span class="pill">Bayesian decoding</span>
+          <span class="pill">sequential decisions</span>
+          <span class="pill">planning & learning</span>
+          <span class="pill">physics → neuro</span>
+        </div>
+      </aside>
+
+      <!-- RIGHT: main content -->
+      <main>
+        <section id="about">
+          <h2>About</h2>
+          <p>
+            I study how the <strong>resource-limited brain</strong> exploits structure in the environment to compute efficiently, which gives rise to systematic <strong>biases</strong> and <strong>variability</strong> in behavior. So far, my work has focused on single-trial decisions (risk, learning, multi-attribute valuation) through the lens of <em>noisy/resource-rational inference</em>.
+          </p>
+          <p>
+            Going forward, I’m extending the same formalism to <strong>sequential decision-making, planning, and learning</strong>, where structure resides in the temporal dependencies across trials.
+          </p>
+
+          <div class="callout">
+            <div class="small" style="margin-bottom:6px">Example (preprint)</div>
+            <div>
+              Probability weighting arises from boundary repulsions of cognitive noise — <a href="https://www.biorxiv.org/content/10.1101/2025.09.11.675565v1" target="_blank" rel="noopener">probBoundaries</a>
+            </div>
+          </div>
+
+          <p class="small" style="margin-top:10px">
+            I’m also interested in <em>modular hierarchical inference</em> (stage-wise biases from perception to valuation), <em>memory-limited updating</em> (description–experience gap), and <em>goal-dependent computations</em> in multi-attribute choice.
+          </p>
+        </section>
+
+        <section id="interests">
+          <h2>Interests</h2>
+          <ul>
+            <li>Resource-rational cognition; noisy inference; efficient coding</li>
+            <li>Bayesian decoding; computational psychophysics; decision under risk/uncertainty</li>
+            <li>Sequential decisions, planning, and statistical/RL learning</li>
+            <li>Links to physics: stochastic processes, constraints, information & representation</li>
+          </ul>
+        </section>
+
+        <section id="education">
+          <h2>Education</h2>
+
+          <div class="edu-item">
+            <div class="edu-head">
+              <div>Ph.D. in Neuroeconomics <span class="edu-inst">· University of Zurich</span></div>
+              <div class="small">2020–Present</div>
+            </div>
+            <div class="small">Advisor: Prof. Christian Ruff</div>
+            <div class="edu-foot">Thesis (ongoing): Noisy inference as a basis of human decision biases</div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-head">
+              <div>M.S. in Physics <span class="edu-inst">· IISER Mohali</span></div>
+              <div class="small">2017–2020</div>
+            </div>
+            <div class="small">Advisors: Prof. Somdatta Sinha, Dr. Satyajit Jenna</div>
+            <div class="edu-foot">Thesis: Modelling neurons and their collective behaviour</div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-head">
+              <div>B.S. in Physics <span class="edu-inst">· IISER Mohali</span></div>
+              <div class="small">2015–2017</div>
+            </div>
+            <div class="edu-foot">Project: Probing the dipole anisotropy of the universe (GLEAM dataset)</div>
+          </div>
+        </section>
+
+        <footer>
+          © <span id="y">2025</span> Saurabh Bedi · Zurich · <a href="mailto:saurabh.bedi@econ.uzh.ch">saurabh.bedi@econ.uzh.ch</a>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // keep footer year current
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
