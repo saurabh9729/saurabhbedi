@@ -52,7 +52,7 @@
       padding:10px 12px; border:1px solid var(--line); border-radius:10px;
     }
     .links a span{font-weight:600}
-    .pill{display:inline-block; padding:3px 8px; border:1px solid var(--line); border-radius:999px; font-size:12px; color:var(--muted); margin-right:6px}
+    .pill{display:inline-block; padding:3px 8px; border:1px solid var(--line); border-radius:999px; font-size:12px; color:var(--muted); margin-right:6px; margin-bottom:6px}
 
     /* Main content */
     section{margin-bottom:28px; padding-bottom:8px; border-bottom:1px dashed var(--line)}
@@ -60,15 +60,15 @@
     p{line-height:1.6; margin:10px 0}
     ul{margin:10px 0 6px 18px}
     li{margin:6px 0}
-    .callout{
-      background:#f8fafc; border:1px solid var(--line); border-radius:12px; padding:12px 14px; margin-top:10px
-    }
     .small{font-size:14px;color:var(--muted)}
     .edu-item{margin:10px 0}
     .edu-head{display:flex; justify-content:space-between; gap:12px; font-weight:700}
     .edu-inst{color:var(--muted); font-weight:500}
-    .edu-foot{font-style:italic; color:var(--muted)}
     footer{margin-top:16px; color:var(--muted); font-size:14px}
+
+    /* Tag groups */
+    .tag-group{margin-top:14px}
+    .tag-title{font-size:12px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px}
   </style>
 </head>
 <body>
@@ -86,29 +86,40 @@
         <p class="role">Neuroeconomics · Computational Cognitive Science</p>
 
         <div class="links">
-          <!-- TODO: replace # with your Bluesky URL if you have one -->
-          <a href="#" target="_blank" rel="noopener">
-            <span>Bluesky</span> <span class="small">/ social</span>
+          <a href="https://bsky.app/profile/saurabhbedi.bsky.social" target="_blank" rel="noopener">
+            <span>Bluesky</span> <span class="small">/ @saurabhbedi.bsky.social</span>
           </a>
           <a href="https://scholar.google.com/citations?user=PZrYFUMAAAAJ&hl=en" target="_blank" rel="noopener">
             <span>Google Scholar</span> <span class="small">/ publications</span>
-          </a>
-          <a href="cv/Saurabh_Bedi_CV.pdf" target="_blank" rel="noopener">
-            <span>CV</span> <span class="small">/ PDF</span>
           </a>
           <a href="mailto:saurabh.bedi@econ.uzh.ch">
             <span>Email</span> <span class="small">/ saurabh.bedi@econ.uzh.ch</span>
           </a>
         </div>
 
-        <div style="margin-top:14px">
-          <span class="pill">resource-rationality</span>
-          <span class="pill">noisy inference</span>
-          <span class="pill">efficient coding</span>
-          <span class="pill">Bayesian decoding</span>
-          <span class="pill">sequential decisions</span>
-          <span class="pill">planning & learning</span>
-          <span class="pill">physics → neuro</span>
+        <!-- Tag groups -->
+        <div class="tag-group">
+          <div class="tag-title">Current Work</div>
+          <div>
+            <span class="pill">resource-rationality</span>
+            <span class="pill">noisy inference</span>
+            <span class="pill">efficient coding</span>
+            <span class="pill">Bayesian decoding</span>
+            <span class="pill">probability distortions</span>
+            <span class="pill">description–experience gap</span>
+            <span class="pill">multi-attribute decisions</span>
+          </div>
+        </div>
+
+        <div class="tag-group">
+          <div class="tag-title">Future Interests</div>
+          <div>
+            <span class="pill">sequential decisions</span>
+            <span class="pill">planning & learning</span>
+            <span class="pill">modular hierarchical inference</span>
+            <span class="pill">memory-limited updating</span>
+            <span class="pill">goal-dependent computation</span>
+          </div>
         </div>
       </aside>
 
@@ -117,21 +128,16 @@
         <section id="about">
           <h2>About</h2>
           <p>
-            I study how the <strong>resource-limited brain</strong> exploits structure in the environment to compute efficiently, which gives rise to systematic <strong>biases</strong> and <strong>variability</strong> in behavior. So far, my work has focused on single-trial decisions (risk, learning, multi-attribute valuation) through the lens of <em>noisy/resource-rational inference</em>.
+            I study how the <strong>resource-limited brain</strong> exploits structure in the environment to compute efficiently, which gives rise to systematic <strong>biases</strong> and <strong>variability</strong> in behavior.
           </p>
           <p>
-            Going forward, I’m extending the same formalism to <strong>sequential decision-making, planning, and learning</strong>, where structure resides in the temporal dependencies across trials.
+            So far, my work has focused on <strong>single-trial decisions</strong> (risk, learning, multi-attribute valuation) through the lens of <em>noisy/resource-rational inference</em>.
           </p>
-
-          <div class="callout">
-            <div class="small" style="margin-bottom:6px">Example (preprint)</div>
-            <div>
-              Probability weighting arises from boundary repulsions of cognitive noise — <a href="https://www.biorxiv.org/content/10.1101/2025.09.11.675565v1" target="_blank" rel="noopener">probBoundaries</a>
-            </div>
-          </div>
-
-          <p class="small" style="margin-top:10px">
-            I’m also interested in <em>modular hierarchical inference</em> (stage-wise biases from perception to valuation), <em>memory-limited updating</em> (description–experience gap), and <em>goal-dependent computations</em> in multi-attribute choice.
+          <p>
+            Broadly, I work on: <em>perception in risky decision-making</em> and biases such as <em>probability distortions in description</em>; mechanisms behind the <em>description–experience gap</em>; <em>decision biases in multi-attribute choice</em>; and <em>higher-order cognition as modular, resource-rational sequential inference</em>.
+          </p>
+          <p>
+            See <a href="https://www.biorxiv.org/content/10.1101/2025.09.11.675565v1" target="_blank" rel="noopener">here</a> for a recent example of this approach.
           </p>
         </section>
 
@@ -145,31 +151,30 @@
           </ul>
         </section>
 
-     <section id="education">
-  <h2>Education</h2>
+        <section id="education">
+          <h2>Education</h2>
 
-  <div class="edu-item">
-    <div class="edu-head">
-      <div>Ph.D. in Neuroeconomics <span class="edu-inst">· University of Zurich</span></div>
-      <div class="small">2020–Present</div>
-    </div>
-  </div>
+          <div class="edu-item">
+            <div class="edu-head">
+              <div>Ph.D. in Neuroeconomics <span class="edu-inst">· University of Zurich</span></div>
+              <div class="small">2020–Present</div>
+            </div>
+          </div>
 
-  <div class="edu-item">
-    <div class="edu-head">
-      <div>M.S. in Physics <span class="edu-inst">· IISER Mohali</span></div>
-      <div class="small">2017–2020</div>
-    </div>
-  </div>
+          <div class="edu-item">
+            <div class="edu-head">
+              <div>M.S. in Physics <span class="edu-inst">· IISER Mohali</span></div>
+              <div class="small">2017–2020</div>
+            </div>
+          </div>
 
-  <div class="edu-item">
-    <div class="edu-head">
-      <div>B.S. in Physics <span class="edu-inst">· IISER Mohali</span></div>
-      <div class="small">2015–2017</div>
-    </div>
-  </div>
-</section>
-
+          <div class="edu-item">
+            <div class="edu-head">
+              <div>B.S. in Physics <span class="edu-inst">· IISER Mohali</span></div>
+              <div class="small">2015–2017</div>
+            </div>
+          </div>
+        </section>
 
         <footer>
           © <span id="y">2025</span> Saurabh Bedi · Zurich · <a href="mailto:saurabh.bedi@econ.uzh.ch">saurabh.bedi@econ.uzh.ch</a>
